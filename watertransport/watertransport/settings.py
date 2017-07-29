@@ -41,17 +41,15 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'django.contrib.sites',
 ]
 
 AUTHENTICATION_BACKENDS = (
-    ...
-    # Needed to login by username in Django admin, regardless of `allauth`
+    
     'django.contrib.auth.backends.ModelBackend',
 
-    # `allauth` specific authentication methods, such as login by e-mail
     'allauth.account.auth_backends.AuthenticationBackend',
-    ...
-)
+    )
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -139,3 +137,5 @@ STATICFILES_DIRS = (
 STATIC_URL = '/static/'
 
 SITE_ID = 1
+
+
